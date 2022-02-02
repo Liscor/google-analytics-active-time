@@ -9,15 +9,13 @@ var idleState = true;
 var scrollArr =  new Array(100).fill(null);
 var modArr = new Array(5).fill(null);
 var medianArr = new Array(5).fill(null);
-//var domText = document.body.innerText ? document.body.innerText : "Leere Eingabe.";
-var domText = document.body.textContent ? document.body.textContent : "Empty Input";
-var domText = "Während die CPU für die Anzahl Objekte entscheidend ist, sorgt die Grafikkarte für die Darstellung des 3D Cockpits, die Kantenglättung, sowie das Zwischenspeichern der Texturen im VRAM. Bei einer Neuanschaffung würde ich auf eine Grafikkarte mit mindestens 8gb VRAM achten. Trotz Texture Komprimierung werden diese eigentlich immer gänzlich genutzt. Auch für die X-Plane Standard Wolken spielt die Grafikkarte eine wichtige Rolle. Gerade bei einer hohe Wolkenabdeckung muss die GPU oft kämpfen. Da ich bereits seit mehreren Monaten X-Enviro nutze spielt das bei mir keine Rolle. Mehr dazu im Vergleich der Wetter Addons für X-Plane. Achtung bei hohen Auflösungen wie 4k Eine Außnahme ist mir mittlerweile seit kurzem aufgefallen: Bei einer sehr hohen Auflösung, wird tatsächlich wesentlich mehr GPU-Power benötigt um die gleiche Framerate zu erreichen. Das ist logisch, denn eine 4K Auflösung verlangt der Grafikkarte generell wesentlich mehr ab. Hier würde ich empfehlen, mindestens eine Nvidia Geforce 1080 oder stärker zu nutzen. Keine AMD Radeon Grafikkarte für X-Plane 11. AMD Radeon Grafikkarten sind gut, nur leider nicht für X-Plane. Denn leider läuft X-Plane 11 mit den OpenGL von Nvidia meist Problem freier. Zu mindestens war es bei mir und einigen anderen Nutzern der Fall. Ich hoffe das ändert sich in Zukunft noch, würde da aber erstmal auf der sicheren und leider teureren Seite bleiben. Nun zu meinem kleinen Test. Mit meiner Nvidia Geforce 1070 habe ich X-Plane 11.20 in 4K getestet. Leider nicht mit den erhofften Resultaten. Mit den gleichen Einstellungen verlor ich um die Hälfte an FPS. Das herunter Stellen von HDR und Anti-Aliasing in den X-Plane 11 Einstellungen brachte schnelle, aber dennoch leider kleine Erfolge. Mögliche Lösung: Bessere Grafikkarte, Auflösung wieder runterstellen, oder GPU bezogene Einstellungen in X-Plane drastisch runterstellen. Bei Nvidia Grafikkarten empfiehlt sich das Aktivieren von Thread Optimization in den Nvidia Treiber Einstellungen.";
+var domText = document.body.innerText ? document.body.innerText : "Leere Eingabe.";
 var wordCount, sentencesCount, syllablesPerWord,avgReadingTime, syllablesCount= 0;
 //Retrieve the document language
 var documentLanguage = document.documentElement.lang ? document.documentElement.lang: 'de-DE';
 //Divide the modArr array into chunks. E.g. 20 stands for 20% steps
 var chunkSize = 20;
-var timer= 5000;
+var timer= 10000;
 var activeTime = 0;
 
 startTime = Date.now();
