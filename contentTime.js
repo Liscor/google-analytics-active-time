@@ -1,9 +1,3 @@
-
-    ({
-        "plugins": ["jsdom-quokka-plugin"],
-        "jsdom": {"file": "index.html"} // Located in project root
-    })
-
 //Check if dataLayer array of Google Tag Manager is allready declared
 window.dataLayer = window.dataLayer || [];
 
