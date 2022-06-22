@@ -1,6 +1,6 @@
-//percentage share for website partition
 var debugMode = true;
-var currentClientHeight, startTime; 
+//percentage share for website partition
+var currentClientHeight
 var idleState = true;
 //scrollArr is used to capture the timings for different scroll depths. Index translates directly to scroll depth in %. E.g. 
 var scrollArr =  new Array(100).fill(null);
@@ -11,7 +11,7 @@ var chunkSize = 20;
 var timer= 5000;
 var activeTime = 0;
 
-startTime = Date.now();
+var startTime = Date.now();
 debugMode ? console.log("startTime set: "+startTime):null;
 
 var prevTime = 0;
@@ -23,7 +23,12 @@ var maxScrollHeight = document.documentElement.scrollHeight;// - document.docume
 //Größe des Viewports in %
 var viewportHeight = Math.round(document.documentElement.clientHeight / maxScrollHeight *100);
 
-idleCheck();
+//idleCheck();
+function setTemplateData(templateDebug, templateTimer){
+  debugMode = tempalateDebug;
+  timer = templateTimer;
+  idleCheck();
+}
 
 function createContentArr(){
 
@@ -49,7 +54,7 @@ function idleCheck() {
     document.ontouchstart = throttle(resetTimer,500);
     window.addEventListener("scroll", throttle(resetTimer,500), true);
   
-    function resetTimer(eventAction) {
+    function resetTimer() {
           
           // If idle state before, set prevTime to current time to skip the idle time in CreateContentArr
         if (idleState == true) {
