@@ -1,3 +1,4 @@
+// 
 var debugMode = true;
 //percentage share for website partition
 var currentClientHeight
@@ -25,7 +26,7 @@ var viewportHeight = Math.round(document.documentElement.clientHeight / maxScrol
 
 //idleCheck();
 function setTemplateData(templateDebug, templateTimer){
-  debugMode = tempalateDebug;
+  debugMode = templateDebug;
   timer = templateTimer;
   idleCheck();
 }
