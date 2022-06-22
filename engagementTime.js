@@ -1,5 +1,4 @@
-// 
-var debugMode = true;
+var debugMode;
 //percentage share for website partition
 var currentClientHeight
 var idleState = true;
@@ -120,7 +119,7 @@ function throttle(func, limit) {
     var timeOnSite = Date.now() - startTime; /*?*/
     var engagementShare = Math.round(100/avgReadingTime*activeTime*100)/100
     
-    window.dataLayer.push({
+    dataLayer.push({
       "event": "engagementTime", 
       "timeOnSite": timeOnSite,
       "activeTime": activeTime,
