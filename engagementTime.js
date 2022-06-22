@@ -117,9 +117,9 @@ function throttle(func, limit) {
   window.addEventListener("beforeunload", function(event) {
     var smallScrollArr = reduceScrollArr();
     var timeOnSite = Date.now() - startTime; /*?*/
-    var engagementShare = Math.round(100/avgReadingTime*activeTime*100)/100
+    //var engagementShare = Math.round(100/avgReadingTime*activeTime*100)/100
     
-    dataLayer.push({
+    window.dataLayer.push({
       "event": "engagementTime", 
       "timeOnSite": timeOnSite,
       "activeTime": activeTime,
